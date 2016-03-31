@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Junks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @junks.each do |junk| %>
+      <tr>
+        <td><%= link_to 'Show', junk %></td>
+        <td><%= link_to 'Edit', edit_junk_path(junk) %></td>
+        <td><%= link_to 'Destroy', junk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Junk', new_junk_path %>
